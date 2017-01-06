@@ -100,7 +100,7 @@
     }
     /* 更新Task*/
     function update_task(index,data){
-        if(!index || !task_list[index]) return;
+        if(index < 0 || !task_list[index]) return;
 
         task_list[index] = $.extend({},task_list[index],data);
         refresh_task_list();
